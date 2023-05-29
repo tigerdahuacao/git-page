@@ -24,6 +24,13 @@ pip install fastapi --trusted-host pypi.tuna.tsinghua.edu.cn
 pip install fastapi -i http://pypi.douban.com/simple/  pip -U --trusted-host pypi.douban.com
 ```
 
+建议修改配置文件一劳永逸
+```bash
+pip config set global.index-url http://pypi.douban.com/simple/ 
+
+pip config set global.trusted-host pypi.douban.com
+```
+
 其他的方法比较麻烦
 
 ---
