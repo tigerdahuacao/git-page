@@ -73,3 +73,47 @@ nextjs的使用办法, 我这里就不说了, 毕竟很多, 看文档比较好
 反正, 就这么先用着吧, 毕竟next也算是react下一个很火的框架
 
 然后是第一次使用了`heroicons`, 这个库的确很方便, 直接把icon变成了`ReactNode`类型, 直接用就可以, 但是里面的图标还不是很多, 不比直接从svg比如iconfont上多, 但是svg还需要转一下, 我现在也没啥好的转的方法找到.
+
+---
+一个关于nextjs 13比较好的帖子
+> https://juejin.cn/post/7247740446280007741
+
+总结几个比较坑的地方:
+1. 在debug和打包的时候, 临时文件/部署文件默认是放在`.next`文件夹下的, 如果要修改为熟悉的名字比如`dist`,`build`, 需要添加配置项
+![pic](202309-学习使用tailwind加ts创建一个网站/017.png) 
+
+2. 因为nextjs服务器端渲染的特性, 所以它打包出来的部署文件不是静态的html文件, 没有`index.html`, 这点不用特别大惊小怪, 如果想要变成静态文件, 也需要添加配置项
+![pic](202309-学习使用tailwind加ts创建一个网站/018.png) 
+
+3. 配置一些其他的简单配置项
+> https://www.cnblogs.com/blogs-xlf/p/14014656.html
+
+4. 一个新的电子邮箱账号
+```yml
+addr: browser.sync.cityofwind@gmail.com
+pwd: Qq111222333
+```
+
+5. 如何在render中部署一个nextjs项目
+> https://render.com/docs/deploy-nextjs-app
+
+6. next比较好的非官方教程
+> https://www.builder.io/blog/next-13-app-router
+> https://juejin.cn/post/7247044423024721980
+
+---
+这里有一个坑爹的地方, 因为我做的仅仅是一个类似demo的网站, 所以很多按钮是按了没有效果的, 就想用popover的这个方式来做一下提示, 之前我尝试过 `tippy.js` 这里本来也是想用的. 但是其在`typescript`中那是完全没法用啊(这个库有点问题, 在强类型下, 有2个关键参数没有类型, 使用者又不知道应该是什么), 放弃 `tippy.js`了, 在兜兜转转了好久之后, 放弃了转而使用`material UI`
+> https://mui.com/material-ui/react-tooltip/
+
+![pic](202309-学习使用tailwind加ts创建一个网站/019.png) 
+```bash
+yarn add @mui/material @emotion/react @emotion/styled @heroicons/react  react-router-dom
+```
+
+不知道为什么这么创建出来的react中ts的支持是要手动加上去的
+```
+yarn add typescript @types/node @types/react @types/react-dom @types/jest
+```
+然后把src/index.js 重命名为 src/index.tsx
+
+
