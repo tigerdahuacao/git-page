@@ -32,4 +32,10 @@ winget install --id GitHub.cli
 ![pic](./202310-使用githubcli/009.png)
 ![pic](./202310-使用githubcli/010.png)
 
+但是GitHub Cli基本上都是帮助你完成一些仓库的操作, 新建仓库什么的.  
+其依然不能解决我突然不能push代码的问题.
+
+后来发现了问题所在, 是之前的person access token过期被自动删掉了. (虽然我创建的是永不过期, 但是Github还是时不时经常会删这些没用expiration date的token)
+![pic](./202310-使用githubcli/013.png)
+可以看见之前的token已经不见了
 
