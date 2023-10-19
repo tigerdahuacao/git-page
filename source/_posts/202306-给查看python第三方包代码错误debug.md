@@ -105,5 +105,7 @@ for pkg in search_packages_info(query):
 ![pages](202306-给查看python第三方包代码错误debug/005.png)
 用`dir()`查看后, 各个参数也没有给到获取的方法, 而下面的代码中可以发现, 它是以列表的形式来处理的, 所以转换成字典
 
+
+//TODO
 结果转换还失败了
 ![pages](202306-给查看python第三方包代码错误debug/006.png)
