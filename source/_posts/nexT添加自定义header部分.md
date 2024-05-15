@@ -7,7 +7,7 @@ tags:
 - hexo
 ---
 
-文章写的越来越多了, 是不是发给朋友看, 他们表示要给我的文章点歌赞又不知道在哪里, 今天折腾了一下.  
+文章写的越来越多了, 打算发给朋友看, 他们表示要给我的文章点个赞又不知道在哪里, 今天折腾了一下.  
 首选是把侧边栏的open变成always
 ![pages](nexT添加自定义header部分/001.png)
 然后添加GitHub的关联按钮
@@ -21,4 +21,5 @@ tags:
 ```html
 <div style="display:flex;justify-content: center; align-items:center; ">If you like this page, you can go to <a href="https://github.com/user-q123/user-q123.github.io.git">&nbsp;original repo&nbsp;</a> and star it!</div>
 ```
+效果如下
 ![pages](nexT添加自定义header部分/005.png)

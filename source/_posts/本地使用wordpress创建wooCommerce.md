@@ -3,9 +3,10 @@ title: 本地使用wordpress创建wooCommerce
 date: 2023-02-02 10:51:23
 categories:
 - 开发随笔
-- 教程
 tags: 
 - 部署
+- wordpress
+- wooCommerce
 ---
 
 首先要明确, wooCommerce是开源而免费的, 因为毕竟它是基于wordpress的, 但是如果你打开wooCommerce的官网, 基本上就会发现是要收费的, 这点很奇怪.
@@ -31,12 +32,12 @@ wordpress是基于php的, 所以在windows上安装phpstudy(用其他的类似xa
 ![pages](本地使用wordpress创建wooCommerce/004.png)
 修改port为3308(或者其他什么的)
 ![pages](本地使用wordpress创建wooCommerce/0011.png)
-2. 给phpMyAdmin修改端口号, 新建` config.inc.php `文件(可以从原来就有的` config.sample.inc.php `文件中复制过滤)
+1. 给phpMyAdmin修改端口号, 新建` config.inc.php `文件(可以从原来就有的` config.sample.inc.php `文件中复制过滤)
 ![pages](本地使用wordpress创建wooCommerce/001.png)
 ![pages](本地使用wordpress创建wooCommerce/002.png)
 可以看到修改为3308也就是和mysql服务的3306错开, 就可以链接上了
 ![pages](本地使用wordpress创建wooCommerce/003.png)
-3. 此时虽然phpstudy的链接和启动好了, 但是wordpress的默认数据库链接还没有改, 此时再进入wordpress会进入这个页面
+1. 此时虽然phpstudy的链接和启动好了, 但是wordpress的默认数据库链接还没有改, 此时再进入wordpress会进入这个页面
 ![pages](本地使用wordpress创建wooCommerce/005.png)
 这就要求手动配置wordpress的配置文件` wp-config.php `
 ![pages](本地使用wordpress创建wooCommerce/006.png)
