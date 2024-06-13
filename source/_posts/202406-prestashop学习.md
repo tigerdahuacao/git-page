@@ -23,5 +23,25 @@ tags:
 ![pic](./202406-prestashop学习/010.png)  
 Linux不会  
 ![pic](./202406-prestashop学习/011.jpg)
-安装成功  
-![pic](./202406-prestashop学习/012.jpg)
+安装成功      
+![pic](./202406-prestashop学习/012.jpg)  
+访问后台会告诉你为了安全考虑, 需要删除`/Install`文件夹
+![pic](./202406-prestashop学习/015.png)
+![pic](./202406-prestashop学习/014.png)  
+删除后可以进入
+![pic](./202406-prestashop学习/016.png)
+
+这里有一点, 一定要启用SSL, 或者在店铺的后台管理设置中也启用SSL, 否则会导致访问店铺时出现一直重定向的问题.
+![pic](./202406-prestashop学习/017.png)
+
+添加`PayPal Offical`插件 
+![pic](./202406-prestashop学习/018.png)
+![pic](./202406-prestashop学习/019.png)  
+当然也可以通过从插件市场下载, 然后通过上传的方式安装
+![pic](./202406-prestashop学习/020.png)
+![pic](./202406-prestashop学习/021.png)
+![pic](./202406-prestashop学习/022.png)  
+安装完毕
+![pic](./202406-prestashop学习/023.png)  
+配置界面
+![pic](./202406-prestashop学习/023.png)
