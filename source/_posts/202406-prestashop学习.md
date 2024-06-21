@@ -101,3 +101,23 @@ PayPal支付方式在各个页面的展示情况:
 ![pic](./202406-prestashop学习/044.png) 
 点击`place order`后的新标签页展示
 ![pic](./202406-prestashop学习/045.png) 
+
+---
+## 使用PrestaShop Checkout built with PayPal 插件
+Disable `paypal official`插件
+![pic](./202406-prestashop学习/046.png) 
+进入到`PrestaShop Checkout built with PayPal`插件配置页中, 关联
+![pic](./202406-prestashop学习/047.png) 
+![pic](./202406-prestashop学习/048.png) 
+在link PayPal账号前需要link Prestashop账号
+![pic](./202406-prestashop学习/049.png) 
+![pic](./202406-prestashop学习/050.png) 
+Link完成, 可以link PayPal 账号
+![pic](./202406-prestashop学习/051.png) 
+Onboard:
+![pic](./202406-prestashop学习/052.png) 
+![pic](./202406-prestashop学习/053.png) 
+![pic](./202406-prestashop学习/054.png) 
+![pic](./202406-prestashop学习/055.png) 
+在测试沙箱环境的中国账号的时候, 发现出现了和另外一个插件一样的错误:
+![pic](./202406-prestashop学习/056.png) 
