@@ -59,7 +59,13 @@ tags:
 ![pic](./202406-prestashop学习/023.png)  
 ---
 ## 配置界面:  
-先安装启用插件
+### PayPal Official Module
+`PayPal Official Module`的卡支付功能只有在德国地区才可以使用.  
+调整地区: International $\Rightarrow$ Localization
+![pic](./202406-prestashop学习/02301.png)  
+![pic](./202406-prestashop学习/02302.png)  
+
+之后先安装启用插件
 ![pic](./202406-prestashop学习/027.png)  
 然后到支付方式列表中配置
 ![pic](./202406-prestashop学习/023.png)
@@ -73,13 +79,15 @@ tags:
 ### 使用中国账号(测试环境无法成功link):
 #### 测试环境:
 ```yml
-email_address:ark@test.com
-password:Qq111222333
+email:
+    business1@ebay.com
+pwd:
+    11111111
 ```
-![pic](./202406-prestashop学习/030.png)
-![pic](./202406-prestashop学习/031.png)
-![pic](./202406-prestashop学习/032.png)
-#### 正式环境
+![pic](./202406-prestashop学习/0301.png)
+![pic](./202406-prestashop学习/0302.png)
+
+#### PayPal Official Module正式环境
 `gpscntest@outlook.com`
 ![pic](./202406-prestashop学习/033.png)
 ![pic](./202406-prestashop学习/034.png)
@@ -87,7 +95,7 @@ link成功
 ![pic](./202406-prestashop学习/035.png)  
 配置:
 ![pic](./202406-prestashop学习/036.png)  
-设置详情: 
+#### 设置详情(非German): 
 ![pic](./202406-prestashop学习/037.png)  
 vault无法被启用  
 ![pic](./202406-prestashop学习/038.png)  
@@ -101,6 +109,28 @@ PayPal支付方式在各个页面的展示情况:
 ![pic](./202406-prestashop学习/044.png) 
 点击`place order`后的新标签页展示
 ![pic](./202406-prestashop学习/045.png) 
+
+#### 设置详情(German): 
+![pic](./202406-prestashop学习/04501.png) 
+PayPal支付方式在各个页面的展示情况: 
+##### C2 PayPal account (表现不正确)
+![pic](./202406-prestashop学习/04502.png) 
+![pic](./202406-prestashop学习/04503.png) 
+![pic](./202406-prestashop学习/04504.png) 
+![pic](./202406-prestashop学习/04505.png) 
+![pic](./202406-prestashop学习/04506.png) 
+##### US PayPal account (表现正确)
+PayPal - 无JS SDK, 新标签页跳转
+![pic](./202406-prestashop学习/04507.png) 
+![pic](./202406-prestashop学习/0450701.png) 
+![pic](./202406-prestashop学习/04508.png) 
+![pic](./202406-prestashop学习/04509.png) 
+VISA - 支付
+![pic](./202406-prestashop学习/0450901.png) 
+![pic](./202406-prestashop学习/0450902.png) 
+MasterCard - 支付
+![pic](./202406-prestashop学习/0450903.png) 
+![pic](./202406-prestashop学习/0450904.png) 
 
 ---
 ## 使用PrestaShop Checkout built with PayPal 插件
@@ -119,5 +149,40 @@ Onboard:
 ![pic](./202406-prestashop学习/053.png) 
 ![pic](./202406-prestashop学习/054.png) 
 ![pic](./202406-prestashop学习/055.png) 
-在测试沙箱环境的中国账号的时候, 发现出现了和另外一个插件一样的错误:
 ![pic](./202406-prestashop学习/056.png) 
+打开ACDC:
+![pic](./202406-prestashop学习/057.png) 
+3DS和Vault
+![pic](./202406-prestashop学习/058.png) 
+![pic](./202406-prestashop学习/059.png) 
+(Vault的账号无法被管理, 只有一个数量显示)
+![pic](./202406-prestashop学习/060.png) 
+
+### PayPal支付方式在各个页面的展示情况: (以下都是C2卖家账号)
+![pic](./202406-prestashop学习/061.png) 
+![pic](./202406-prestashop学习/062.png) 
+![pic](./202406-prestashop学习/063.png) 
+(沙箱环境的卡支付只支持BCDC)
+![pic](./202406-prestashop学习/064.png) 
+(正式环境的卡支付可以支持ACDC V2)  
+![pic](./202406-prestashop学习/065.png) 
+VisaCard支付 - With 3ds  
+![pic](./202406-prestashop学习/066.png) 
+![pic](./202406-prestashop学习/067.png) 
+MasterCard支付 - With 3ds  
+![pic](./202406-prestashop学习/068.png) 
+![pic](./202406-prestashop学习/069.png) 
+VisaCard支付 - WithOut 3ds 失败
+![pic](./202406-prestashop学习/070.png) 
+
+### Vault  PayPal
+- first time
+![pic](./202406-prestashop学习/071.png)
+![pic](./202406-prestashop学习/072.png)
+- Returning
+![pic](./202406-prestashop学习/073.png)
+![pic](./202406-prestashop学习/074.png)  
+### Vault  Card
+![pic](./202406-prestashop学习/075.png)
+![pic](./202406-prestashop学习/076.png)
+![pic](./202406-prestashop学习/077.png)
