@@ -121,16 +121,56 @@ ollama create mymodel-14b -f ./ds-14B.txt
 ![pic](./202501-deepseek安装/029.png)
 
 ## 界面
-然后是在命令行中使用对话不是很美观, 安装`open-webui`  
-`git clone https://github.com/open-webui/open-webui.git`
-![pic](./202501-deepseek安装/026.png)
+然后是在命令行中使用对话不是很美观, 可以通过`open-webui`来可视化  
+> https://github.com/open-webui/open-webui.git
+![pic](./202501-deepseek安装/043.png)
+
 
 经过我的各种尝试, 我觉得使用`miniconda`是最优的(因为在windows下, `docker`依赖于`docker desktop`, 而`ollama`本来就很吃内存了, 再运行一个`docker desktop`卡死)
 去清华源下载`miniconda`
 > https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
 ![pic](./202501-deepseek安装/038.png)
 
-https://www.youtube.com/watch?v=pVk5aN4H2H4
+确认`conda`命令已经添加到系统变量
+![pic](./202501-deepseek安装/039.png)
+
+换清华的源, 可以参考:
+> https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/
+![pic](./202501-deepseek安装/040.png)
+
+
+```yml
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+```
+
+创建虚拟环境:
+`conda create -n open-webui python=3.11`
+![pic](./202501-deepseek安装/041.png)
+
+```bash
+conda deactivate
+conda activate open-webui
+conda install open-webui
+
+
+```bash
+如果你的conda源里没有`open-webui`那么就用`pip`安装
+![pic](./202501-deepseek安装/026.png)
+```
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install open-webui
+```
+
 
 ---
 如果觉得`python`安装的方法太麻烦的话, 可以通过浏览器插件`Page Assist`的方式完成:
