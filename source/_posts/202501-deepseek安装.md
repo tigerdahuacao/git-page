@@ -130,7 +130,6 @@ ollama create mymodel-14b -f ./ds-14B.txt
 > https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
 ![pic](./202501-deepseek安装/038.png)
 
-https://www.youtube.com/watch?v=pVk5aN4H2H4
 
 ---
 如果觉得`python`安装的方法太麻烦的话, 可以通过浏览器插件`Page Assist`的方式完成:
