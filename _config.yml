@@ -1,10 +1,10 @@
 # Site
-title: My blog
+title: Yuncong's site
 subtitle: 'Viva la vida'
 description: ''
 keywords:
 author: Petro
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
@@ -101,7 +101,3 @@ deploy:
   type: git
   repo: https://github.com/user-q123/user-q123.github.io.git
   branch: master
-
-
-# 下面都是next的配置:s
-# language: zh-Hans
