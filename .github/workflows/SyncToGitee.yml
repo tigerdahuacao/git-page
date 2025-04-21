@@ -1,18 +1,27 @@
 name: Sync To Gitee
 
-on: [ push, delete, create ]
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
 
 jobs:
-  build:
+  sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
-        env:
-          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+      - name: Checkout source code
+        uses: actions/checkout@v3
         with:
-          # 注意替换为你的 GitHub 源仓库地址
-          source-repo: git@github.com:tigerdahuacao/git-page.git
-          # 注意替换为你的 Gitee 目标仓库地址
-          destination-repo: git@gitee.com:moss-thirteen/blog-de-petro.git
+          fetch-depth: 0
+
+      - name: Sync to Gitee
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/tigerdahuacao
+          dst: gitee/moss-thirteen
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: "git-page"
+          force_update: true
